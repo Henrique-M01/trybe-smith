@@ -9,6 +9,7 @@ export default class OrderModel {
   }
 
   public async getAllOrders(): Promise<IOrders[]> {
+    // Query construida com ajuda do Assis Meneghetti
     const [result] = await this.connection.execute(
       `SELECT 
           Orders.id, Orders.userId, Products.id AS products
